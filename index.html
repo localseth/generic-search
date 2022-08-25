@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Open Network Search</title>
+</head>
+<body>
+    <main>
+        <h1>Open Network Foundation</h1>
+        <form class="container">
+            <div class="item searchbar">
+                <input type="text" id="search-box" name="search" placeholder="Enter search terms here...">
+                <button id="search-btn" for="search-box" class="search-btn">Search</button>
+            </div>
+                <button id="options" class="options-btn" name="options-btn">Show search options</button>
+            <div class="item options">
+                <div class="item">
+                    <input type="checkbox" id="regex" name="user-regex">
+                    <label for="regex">Allow RegEx input</label>
+                </div>
+                <div class="item">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort" name="user-sort">
+                        <option value="" hidden>choose an option</option>
+                        <option value="recent">Recent</option>
+                        <option value="popular">Popular</option>
+                        <option value="option 3"> option 3</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="search-op-3" name="user-op-3">
+                    <label for="search-op-3">Search Option 3</label>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
