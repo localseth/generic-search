@@ -3,6 +3,7 @@
 }
 
 body {
+    font-family: "Poppins", sans-serif;
     /* display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
@@ -13,22 +14,33 @@ body {
 main {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     width: 800px;
     max-width: 70%;
-    min-height: 100vh;
+    min-height: 90vh;
+}
+
+header {
+  height: 15vh;
+  margin-bottom: 2rem;
 }
 
 h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     color: #FAFAFB;
     height: 5rem;
 }
 
-label {
+a {
+  color: #94FFB2;
+}
+
+label, .tip span {
     color: #92929D;
 }
 
@@ -39,13 +51,18 @@ input[type="text"] {
     /* max-width: 70%; */
     height: 100%;
     border: none;
-    border-radius: 15px;
+    border-radius: 15px 2px 2px 15px;
     padding-left: 1rem;
 }
 
 input[type="text"]:focus {
     outline: none;
     Border: 2px solid #94FFB2;
+    padding-left: 0.875rem;
+}
+
+.options select {
+    margin-left: 0.5rem;
 }
 
 button.options-btn {
@@ -57,6 +74,16 @@ button.options-btn {
     margin: 1rem;
 }
 
+button:hover {
+    cursor: pointer;
+    opacity: 85%;
+}
+
+button:active, button:focus {
+    outline: none;
+    opacity: 85%;
+}
+
 .searchbar {
     width: 100%;
     height: 3rem;
@@ -64,13 +91,15 @@ button.options-btn {
 }
 
 .searchbar button {
-    margin-left: 0.75rem;
+    margin-left: 3px;
 }
 
 .search-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     height: 100%;
     width: 8rem;
-    border-radius: 15px;
+    border-radius: 2px 15px 15px 2px;
     border: none;
     background-color: #94FFB2;
     color: #1C1C24;
@@ -90,15 +119,87 @@ button.options-btn {
 }
 
 .options {
+    color: #92929D;
+    font-weight: 300;
+    font-size: 0.875rem;
     flex-flow: row wrap;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: #292932;
     border-radius: 15px;
-    padding: 1rem 0rem 2rem;
+    padding: 1rem 1rem 1rem;
 }
 
 .options .item {
-    margin: 2rem;
+    margin: 0.325rem 0.5rem;
+    /* border-left: 4px solid rgba(255, 255, 255, 0.5); */
+}
+
+.tip {
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-flex-start;
+  align-content: center;
+  align-items: flex-start;
+  margin: 2rem 1rem 1rem;
+  padding: 1rem;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.tip  span {
+  height: 1.75rem;
+  width: 3rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  font-style: italic;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #1C1C24;
+  background-color: #94FFB2;
+  border-radius: 01rem;
+}
+
+/* .options .item::after {
+  content: '|';
+} */
+
+/* ANIMATIONS */
+.options {
+  animation-duration: 0.4s;
+  animation-name: slidein, fadein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0%;
+  }
+
+  40% {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+.tip {
+  animation-duration: 1.5s;
+  animation-name: fadein;
 }
