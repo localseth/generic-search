@@ -156,6 +156,11 @@ button:active, button:focus {
   box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
+.example span {
+  font-family: monospace;
+  font-style: normal !important;
+}
+
 .tip  span {
   height: 1.75rem;
   width: 3rem;
@@ -218,7 +223,6 @@ button:active, button:focus {
 .example .hashtag {
   color: white;
   background-color: rgb(155, 140, 120);
-  text-transform: lowercase;
 }
 
 .example .creator {
@@ -240,7 +244,8 @@ button:active, button:focus {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  align-content: top;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 
 .results main {
@@ -273,7 +278,6 @@ button:active, button:focus {
 }
 
 .creator {
-  font-size: 0.75rem;
   font-family: monospace;
   background-color: #92929D;
   color: #1C1C24;
@@ -281,6 +285,34 @@ button:active, button:focus {
   text-decoration: none;
   margin-left: 0.625rem;
   padding: 0.125rem 0.25rem;
+}
+
+.search-result .creator {
+  font-size: 0.75rem;
+}
+
+.creator-container {
+  display: flex;
+  flex-flow: row;
+  overflow: visible;
+}
+
+.tooltip-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.tooltip-container .tooltip {
+  visibility: hidden;
+  z-index: 1;
+  height: 0;
+  margin-left: 0.5rem;
+}
+
+.tooltip-container:hover .tooltip{
+  visibility: visible;
 }
 
 .no-decoration {
@@ -421,7 +453,6 @@ select, input[type="date"] {
 }
 
 /* Date range */
-
 div[class="item date-range"] {
   padding: 0.5rem 1.25rem 1.25rem;
   border-radius: 15px;
@@ -439,4 +470,47 @@ div[class="item date-range"] {
   display: flex;
   flex-flow: row nowrap;
   align-content:space-between;
+}
+
+/* Removes the clear button from date inputs */
+/* input[type="date"]::-webkit-clear-button {
+  display: none;
+} */
+
+/* Removes the spin button */
+/* input[type="date"]::-webkit-inner-spin-button { 
+  display: none;
+} */
+
+/* Always display the drop down caret */
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+  color:#92929D;
+} */
+
+/* A few custom styles for date inputs */
+input[type="date"], select {
+  appearance: none;
+  -webkit-appearance: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border:1px solid #92929D;
+  border-radius: 10px;
+  background: inherit;
+  padding: 0.5rem 1rem;
+  display: inline-block !important;
+  visibility: visible !important;
+  width: 10rem;
+}
+
+input[type="date"]:focus, select:focus {
+  outline: none;
+  border-color:#94FFB2;
+}
+
+input[type="date"], focus {
+  color: inherit;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
