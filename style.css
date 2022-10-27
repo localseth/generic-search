@@ -275,6 +275,7 @@ button:active, button:focus {
   align-items: stretch;
   align-content: flex-start;
   width: 100%;
+  height: auto;
 }
 
 .creator {
@@ -297,11 +298,13 @@ button:active, button:focus {
   overflow: visible;
 }
 
+/* Tooltip styles */
 .tooltip-container {
   display: flex;
   flex-flow: row;
   justify-content: flex-end;
   align-items: flex-end;
+  width: auto;
 }
 
 .tooltip-container .tooltip {
@@ -309,10 +312,39 @@ button:active, button:focus {
   z-index: 1;
   height: 0;
   margin-left: 0.5rem;
+  position: relative;
+  left: 1rem;
+  top: -5.5rem;
 }
 
 .tooltip-container:hover .tooltip{
   visibility: visible;
+}
+
+.mini-profile {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: center;
+  align-content: center;
+  width: auto;
+  height: auto;
+  padding: 0.25rem;
+  border-radius: 5px;
+  background-color: #292932;
+}
+
+.mini-profile p {
+  margin-right: 0.5rem !important;
+}
+
+.user-img {
+  height: 60px;
+  width: auto;
+  border-radius: 50% !important;
+  margin: 0.5rem !important;
+  padding: 0.125rem;
+  background-color: rgba(0, 76, 255, 0.463);
 }
 
 .no-decoration {
@@ -322,7 +354,7 @@ button:active, button:focus {
 .results .options {
   margin: 0.25rem 0.25rem 1rem;
   justify-content: center;
-  width: auto;
+  width: 80vw;
   background-color: transparent;
 }
 
@@ -394,11 +426,11 @@ button:active, button:focus {
 /* Checkbox styling */
 .column {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   width: 100%;
 }
 .column > .item.column {
-  width: 50%;
   align-items: flex-start;
   justify-content: flex-start;
   flex-flow: column nowrap;
@@ -453,11 +485,14 @@ select, input[type="date"] {
 }
 
 /* Date range */
-div[class="item date-range"] {
-  padding: 0.5rem 1.25rem 1.25rem;
-  border-radius: 15px;
-  text-align: left;
+.border {
   border: 2px solid #92929D;
+  border-radius: 15px;
+  padding: 0.5rem 1.25rem 1.25rem;
+}
+
+div[class="item date-range border"] {
+  text-align: left;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
