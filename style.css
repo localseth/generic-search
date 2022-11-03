@@ -44,6 +44,19 @@ a {
   color: #94FFB2;
 }
 
+a.no-style {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+}
+
+article:hover{
+  cursor: pointer;
+  background-color: rgba(255,255,255 0.03);
+}
+
 label, .tip span {
     color: #92929D;
 }
@@ -118,7 +131,7 @@ button:active, button:focus {
 .item {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -141,6 +154,19 @@ button:active, button:focus {
     /* border-left: 4px solid rgba(255, 255, 255, 0.5); */
 }
 
+.sort {
+  display: flex;
+  width: 100%;
+  align-self: flex-start;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sort label {
+  overflow: hidden;
+}
+
 .tip {
   text-align: left;
   background-color: transparent;
@@ -150,7 +176,7 @@ button:active, button:focus {
   justify-content: flex-flex-start;
   align-content: center;
   align-items: flex-start;
-  margin: 2rem 1rem 1rem;
+  margin: 1.5rem 0.5rem 0.5rem;
   padding: 1rem;
   border: 2px solid #94FFB2;
   box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
@@ -341,6 +367,7 @@ button:active, button:focus {
 .user-img {
   height: 60px;
   width: auto;
+  border: 1px solid #fafafb;
   border-radius: 50% !important;
   margin: 0.5rem !important;
   padding: 0.125rem;
@@ -376,6 +403,10 @@ button:active, button:focus {
 
 .results nav a {
   margin: 1rem 1rem;
+}
+
+.current-page-nav {
+  text-decoration: underline;
 }
 
 .results {
@@ -433,7 +464,7 @@ button:active, button:focus {
 .column > .item.column {
   align-items: flex-start;
   justify-content: flex-start;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
 }
 
 .form-control {
@@ -496,7 +527,7 @@ div[class="item date-range border"] {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  min-width: 30%;
+  width: 50%;
 }
 
 .date-range .item {
@@ -548,4 +579,53 @@ input[type="date"], focus {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
+}
+
+/* People Results */
+.large-profile-pic {
+  height: 100%;
+  width: auto;
+  border: 3px solid;
+  margin-right: 1rem !important;
+}
+
+article:nth-of-type(2)  .large-profile-pic{
+    background-color: rgb(115, 5, 115);
+}
+
+article:nth-of-type(3)  .large-profile-pic{
+  background-color: rgb(33, 99, 48);
+}
+
+article:nth-of-type(4)  .large-profile-pic{
+  background-color: rgb(149, 101, 30);
+}
+
+.link-section ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-section li {
+  margin: 0.25rem 1rem 0.25rem 0rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid;
+  border-radius: 6px;
+  background-color: #292932;
+}
+
+.link-section li:hover {
+  border: 1px solid #94FFB2;
+}
+
+.link-section a {
+  text-decoration: none;
+  font-weight: 400;
+  color:#fafafb;
+  text-transform: uppercase;
 }

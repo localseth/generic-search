@@ -14,7 +14,7 @@
     <header>
         <form class="container" autocomplete="off">
             <div class="item searchbar">
-                <h2>Inverted Tech Foundation</h2>
+                <h2><a class="no-style" href="./index.html">Inverted Tech Foundation</a></h2>
                 <input type="text" id="search-box" name="search" placeholder="Enter search terms here...">
                 <button type="button" id="search-btn" for="search-box" class="search-btn">Search</button>
             </div>
@@ -34,15 +34,15 @@
                         </div>
                         <div class="item column border">
                             <div class="item sort">
-                                <label for="sort">Sort by:
-                                    <select id="sort" name="user-sort">
-                                        <option value="" hidden>choose an option</option>
-                                        <option value="recent">Recent</option>
-                                        <option value="popular">Old</option>
-                                        <option value="option 3">Popular</option>
-                                        <option value="option 4">Unpopular</option>
-                                    </select>
-                                </label>
+                                <label for="sort">Sort by:</label>
+                                <select id="sort" name="user-sort">
+                                    <option value="" hidden>choose an option</option>
+                                    <option value="recent">Recent</option>
+                                    <option value="popular">Old</option>
+                                    <option value="option 3">Popular</option>
+                                    <option value="option 4">Unpopular</option>
+                                </select>
+                                
                             </div>
                             <div class="item">
                                 <label for="regex" class="form-control">
@@ -67,8 +67,8 @@
             </div>
         </form>
         <nav>
-            <a href="#">All</a>
-            <a href="#">People</a>
+            <span class="current-page-nav">All</span>
+            <a href="./results-people.html">People</a>
             <a href="#">Images</a>
             <a href="#">Articles</a>
             <a href="#">Videos</a>
