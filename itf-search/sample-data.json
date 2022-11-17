@@ -34,7 +34,7 @@
         },
         "Qui-Gon Jinn" : {
             "id": "16126",
-            "handle": "jinnforce"
+            "handle": "jinnforce",
             "alias": "Qui-Gon Jinn",
             "bio": "Immortal Jedi looking for work in the afterlife. M.A. in The Force and M.S. in Midiclorian Technologies. Excells at separating children from their parents. Strong ability to make empty promises of a bright future.",
             "website": "https://jointheforcenow.starwars",
@@ -49,6 +49,7 @@
             "thumbnail": "./public/sample-image.png",
             "author": "Johnny Hammerstix",
             "title": "Article no. 1",
+            "link": "https://linktothecontent.web",
             "body-text": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. 
 
             Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula. 
@@ -62,6 +63,7 @@
             "thumbnail": "./public/sample-image.png",
             "author": "Qui-Gon Jinn",
             "title": "Magnum Opus",
+            "link": "https://linktothecontent.web",
             "body-text": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. 
 
             Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula. 
@@ -75,7 +77,18 @@
             "thumbnail": "./public/sample-image.png",
             "author": "Patron Saint",
             "title": "Video content",
+            "link": "https://linktothecontent.web",
             "body-text": "This video is about stuff and it's interesting so you'll probably want to watch it, okay?"
+        },
+        "0000004": {
+            "type": "audio",
+            "date-published": "20221107T000000-0400",
+            "date-updated": "",
+            "thumbnail": "./public/sample-image.png",
+            "author": "16125",
+            "title": "Debut Album",
+            "link": "https://linktothecontent.web",
+            "body-text": "Stream the entire Debut Album from 16125 now!"
         }
     }
 }
