@@ -1,6 +1,6 @@
 {
-    "users":{
-        "johnny hamerstix" : {
+    "users":[
+        {
             "id": "16122",
             "handle": "jhammerstix",
             "alias": "Johnny Hammerstix",
@@ -8,7 +8,7 @@
             "website": "https://jhammerstix.onion",
             "stat": 4.2
         },
-        "Patron Saint" : {
+        {
             "id": "16123",
             "handle": "StPatron",
             "alias": "Patron Saint",
@@ -16,7 +16,7 @@
             "website": "https://patron.saint",
             "stat": 210
         },
-        "John Smith" : {
+        {
             "id": "16124",
             "handle": "Jsmith",
             "alias": "John Smith",
@@ -24,7 +24,7 @@
             "website": "https://johnsmith.onion",
             "stat": 30.2
         },
-        "16125" : {
+        {
             "id": "16125",
             "handle": "16125",
             "alias": "anonymous",
@@ -32,7 +32,7 @@
             "website": "https://ridiculouslylongsstringofnumbersandlettersgoeshere.onion",
             "stat": 0
         },
-        "Qui-Gon Jinn" : {
+        {
             "id": "16126",
             "handle": "jinnforce",
             "alias": "Qui-Gon Jinn",
@@ -40,9 +40,10 @@
             "website": "https://jointheforcenow.starwars",
             "stat": 66
         }
-    },
-    "content": {
-        "0000001": {
+    ],
+    "content": [
+        {
+            "id": "0000001",
             "type": "article",
             "date-published": "20221031T000000-0400",
             "date-updated": "",
@@ -56,7 +57,8 @@
             
             Mollis pretium lorem primis senectus habitasse lectus scelerisque donec, ultricies tortor suspendisse adipiscing fusce morbi volutpat pellentesque, consectetur mi risus molestie curae malesuada cum. Dignissim lacus convallis massa mauris enim ad mattis magnis senectus montes, mollis taciti phasellus accumsan bibendum semper blandit suspendisse faucibus nibh est, metus lobortis morbi cras magna vivamus per risus fermentum. Dapibus imperdiet praesent magnis ridiculus congue gravida curabitur dictum sagittis, enim et magna sit inceptos sodales parturient pharetra mollis, aenean vel nostra tellus commodo pretium sapien sociosqu."
         },
-        "0000002": {
+        {
+            "id": "0000002",
             "type": "article",
             "date-published": "20221105T000000-0400",
             "date-updated": "",
@@ -70,7 +72,8 @@
             
             Mollis pretium lorem primis senectus habitasse lectus scelerisque donec, ultricies tortor suspendisse adipiscing fusce morbi volutpat pellentesque, consectetur mi risus molestie curae malesuada cum. Dignissim lacus convallis massa mauris enim ad mattis magnis senectus montes, mollis taciti phasellus accumsan bibendum semper blandit suspendisse faucibus nibh est, metus lobortis morbi cras magna vivamus per risus fermentum. Dapibus imperdiet praesent magnis ridiculus congue gravida curabitur dictum sagittis, enim et magna sit inceptos sodales parturient pharetra mollis, aenean vel nostra tellus commodo pretium sapien sociosqu."
         },
-        "0000003": {
+        {
+            "id": "0000003",
             "type": "video",
             "date-published": "20221107T000000-0400",
             "date-updated": "",
@@ -80,7 +83,8 @@
             "link": "https://linktothecontent.web",
             "body-text": "This video is about stuff and it's interesting so you'll probably want to watch it, okay?"
         },
-        "0000004": {
+        {
+            "id": "0000004",
             "type": "audio",
             "date-published": "20221107T000000-0400",
             "date-updated": "",
@@ -90,5 +94,5 @@
             "link": "https://linktothecontent.web",
             "body-text": "Stream the entire Debut Album from 16125 now!"
         }
-    }
+    ]
 }
