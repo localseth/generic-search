@@ -6,7 +6,7 @@ const Home = () => {
     return(
         <div>
             <header></header>
-            <h1>Here's the Title!</h1>
+            <h1>Open Network Search</h1>
             <SearchBar />
         </div>
     )

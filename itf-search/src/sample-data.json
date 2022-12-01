@@ -1,0 +1,90 @@
+{
+    "users":[
+        {
+            "id": "16122",
+            "handle": "jhammerstix",
+            "alias": "Johnny Hammerstix",
+            "bio": "Walkin' on walkways, drinkin' from cups. Get real!",
+            "website": "https://jhammerstix.onion",
+            "stat": 4.2
+        },
+        {
+            "id": "16123",
+            "handle": "StPatron",
+            "alias": "Patron Saint",
+            "bio": "'This ain't a joke!",
+            "website": "https://patron.saint",
+            "stat": 210
+        },
+        {
+            "id": "16124",
+            "handle": "Jsmith",
+            "alias": "John Smith",
+            "bio": "Average, run-of-the-mill, standard issue, base model citizen.",
+            "website": "https://johnsmith.onion",
+            "stat": 30.2
+        },
+        {
+            "id": "16125",
+            "handle": "16125",
+            "alias": "anonymous",
+            "bio": "Leave no trace",
+            "website": "https://ridiculouslylongsstringofnumbersandlettersgoeshere.onion",
+            "stat": 0
+        },
+        {
+            "id": "16126",
+            "handle": "jinnforce",
+            "alias": "Qui-Gon Jinn",
+            "bio": "Immortal Jedi looking for work in the afterlife. M.A. in The Force and M.S. in Midiclorian Technologies. Excells at separating children from their parents. Strong ability to make empty promises of a bright future.",
+            "website": "https://jointheforcenow.starwars",
+            "stat": 66
+        }
+    ],
+    "content": [
+        {
+            "id": "0000001",
+            "type": "article",
+            "datePublished": "20221031T000000-0400",
+            "dateUpdated": "",
+            "thumbnail": "./public/sample-image.png",
+            "author": "Johnny Hammerstix",
+            "title": "Article no. 1",
+            "link": "https://linktothecontent.web",
+            "bodyText": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula. Mollis pretium lorem primis senectus habitasse lectus scelerisque donec, ultricies tortor suspendisse adipiscing fusce morbi volutpat pellentesque, consectetur mi risus molestie curae malesuada cum. Dignissim lacus convallis massa mauris enim ad mattis magnis senectus montes, mollis taciti phasellus accumsan bibendum semper blandit suspendisse faucibus nibh est, metus lobortis morbi cras magna vivamus per risus fermentum. Dapibus imperdiet praesent magnis ridiculus congue gravida curabitur dictum sagittis, enim et magna sit inceptos sodales parturient pharetra mollis, aenean vel nostra tellus commodo pretium sapien sociosqu."
+        },
+        {
+            "id": "0000002",
+            "type": "article",
+            "datePublished": "20221105T000000-0400",
+            "dateUpdated": "",
+            "thumbnail": "./public/sample-image.png",
+            "author": "Qui-Gon Jinn",
+            "title": "Magnum Opus",
+            "link": "https://linktothecontent.web",
+            "bodyText": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula. Mollis pretium lorem primis senectus habitasse lectus scelerisque donec, ultricies tortor suspendisse adipiscing fusce morbi volutpat pellentesque, consectetur mi risus molestie curae malesuada cum. Dignissim lacus convallis massa mauris enim ad mattis magnis senectus montes, mollis taciti phasellus accumsan bibendum semper blandit suspendisse faucibus nibh est, metus lobortis morbi cras magna vivamus per risus fermentum. Dapibus imperdiet praesent magnis ridiculus congue gravida curabitur dictum sagittis, enim et magna sit inceptos sodales parturient pharetra mollis, aenean vel nostra tellus commodo pretium sapien sociosqu."
+        },
+        {
+            "id": "0000003",
+            "type": "video",
+            "datePublished": "20221107T000000-0400",
+            "dateUpdated": "",
+            "thumbnail": "./public/sample-image.png",
+            "author": "Patron Saint",
+            "title": "Video content",
+            "link": "https://linktothecontent.web",
+            "bodyText": "This video is about stuff and it's interesting so you'll probably want to watch it, okay?"
+        },
+        {
+            "id": "0000004",
+            "type": "audio",
+            "datePublished": "20221107T000000-0400",
+            "dateUpdated": "",
+            "thumbnail": "./public/sample-image.png",
+            "author": "16125",
+            "title": "Debut Album",
+            "link": "https://linktothecontent.web",
+            "bodyText": "Stream the entire Debut Album from 16125 now!"
+        }
+    ]
+}
