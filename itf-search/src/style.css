@@ -11,7 +11,8 @@ body {
     background-color: #1C1C24;
 }
 
-main {
+#root {
+    background-color: white;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -22,6 +23,10 @@ main {
     width: 800px;
     max-width: 70%;
     min-height: 90vh;
+}
+
+div {
+  display: flex;
 }
 
 header {

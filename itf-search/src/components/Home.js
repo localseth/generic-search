@@ -1,9 +1,14 @@
 import React from 'react';
 import '../App.css';
+import SearchBar from './SearchBar';
 
 const Home = () => {
     return(
-        <h1>Here's the Title!</h1>
+        <div>
+            <header></header>
+            <h1>Here's the Title!</h1>
+            <SearchBar />
+        </div>
     )
 };
 
