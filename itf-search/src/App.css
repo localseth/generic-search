@@ -332,6 +332,11 @@ ul.container {
   padding: 0.125rem 0.25rem;
 }
 
+span.creator {
+  display: inline-block;
+  width: max-content;
+}
+
 .search-result .creator {
   font-size: 0.75rem;
 }
@@ -340,6 +345,12 @@ ul.container {
   display: flex;
   flex-flow: row;
   overflow: visible;
+}
+
+.header-anchor {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
 }
 
 /* Tooltip styles */
@@ -399,7 +410,7 @@ ul.container {
 .results .options {
   margin: 0.25rem 0.25rem 1rem;
   justify-content: center;
-  width: 80vw;
+  width: 100%;
   background-color: transparent;
 }
 

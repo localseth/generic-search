@@ -1,12 +1,15 @@
 import React, { useState }from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../App.css';
+
+import Tip from './Tip';
 
 const SearchBar = () => {
     // set state
     const [submitting, setSubmitting] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
 
+    const location = useLocation();
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -71,13 +74,8 @@ const SearchBar = () => {
                     </div>
                 </div>
                
-                <div className="tip">
-                  <span>Tip</span>
-                  <p>
-                    To search for creators, use "@" before your search term. For tags, use "#"
-                  </p>
-                  <p className="example"><i>example: </i> <span className="creator">@Iancrossland</span> <span className="hashtag">&#35;music</span> <span className="hashtag">&#35;rock</span></p>
-                </div>
+               <Tip location={location}/>
+               
             </div>
         </form>
     )

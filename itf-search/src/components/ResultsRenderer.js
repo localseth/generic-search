@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../App.css';
 
 const ResultsRenderer = (props) => {
-    console.log(props);
+    console.log('results renderer loaded');
     const { key, type, datePublished, dateUpdate, thumbnail, author, title, link, bodyText } = props;
     return(
         <div className="result-container">

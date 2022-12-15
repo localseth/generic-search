@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import '../App.css';
 
 // import components
@@ -11,9 +11,21 @@ const { users, content } = sampleData;
 
 const Results = () => {
     const [searchParams, setSearchParams] = useSearchParams();
-    console.log(users);
+    const location = useLocation();
     let results;
-    if (content.length > 0) {
+    if (content.length > 0 && location.pathname.includes('/people')) {
+        console.log('Show people only');
+        results = users.map(result => 
+            <ResultsRenderer 
+                key={result.id}
+                handle={result.handle}
+                alias={result.alias}
+                bio={result.bio}
+                website={result.bio}
+                stat={result.stat}
+            />
+        )
+    } else if (content.length > 0) {
        results = content.map(result =>
        <ResultsRenderer
         key={result.id}
@@ -31,7 +43,7 @@ const Results = () => {
     return(
         <div className='results'>
             <header>
-                <div className='item searchbar'>
+                <div className="header-anchor">
                     <h2>Open Network Search</h2>
                     <SearchBar />
                 </div>
