@@ -44,7 +44,6 @@ const Results = () => {
         <div className='results'>
             <header>
                 <div className="header-anchor">
-                    <h2>Open Network Search</h2>
                     <SearchBar />
                 </div>
             </header>

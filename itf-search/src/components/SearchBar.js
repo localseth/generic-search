@@ -1,5 +1,5 @@
-import React, { useState }from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useState, useEffect }from 'react';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import '../App.css';
 
 import Tip from './Tip';
@@ -36,6 +36,7 @@ const SearchBar = () => {
     return(
         <form className="container" autoComplete="off" onSubmit={handleSubmit}>
             <div className="item searchbar">
+                <h2 className={location.pathname === '/' ? 'hidden' : ''}><Link to='/' className='no-style'>Open Network Search</Link></h2>
                 <input onChange={handleChange} type="text" id="search-box" name="search" placeholder="Enter search terms here..."></input>
                 <button type="submit" id="search-btn" for="search-box" className="search-btn">Search</button>
             </div>
