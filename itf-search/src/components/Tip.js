@@ -14,21 +14,23 @@ const Tip = (props) => {
         }
     };
 
+    // I probably shouldn't call the isSearch() this way, but it works for now
     const setHidden = () => {
+        console.log('useEffect called! Is it a search? ', isSearch())
         const tipElement = document.querySelector('.tip');
-        console.log(tipElement);
-        if (isSearch) {
+        if (isSearch()) {
             if (!tipElement.classList.value.includes('hidden')) {
                 tipElement.classList.add('hidden')
             }
-        } else if(!isSearch) {
+        } else if(!isSearch()) {
             if (tipElement.classList.value.includes('hidden')) {
                 tipElement.classList.remove('hidden');
             }
         }
     };
 
-    window.addEventListener('DOMContentLoaded', setHidden);
+    useEffect(setHidden, []);
+    // window.addEventListener('DOMContentLoaded', setHidden);
 
     return(
         <div className="tip">
