@@ -8,48 +8,33 @@ import ResultsRenderer from './ResultsRenderer';
 
 const sampleData = require('../sample-data.json');
 const { users, content } = sampleData;
+const searchResult = users.concat(content);
+console.log(searchResult);
+
+// shuffle function to make sample data appera more natural
+function shuffleArray(arr) {
+    arr.sort(() => Math.random() - 0.5);
+}
+
+shuffleArray(searchResult);
 
 const Results = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const location = useLocation();
     let results;
-    if (content.length > 0 && location.pathname.includes('/people')) {
-        console.log('Show people only');
-        results = users.map(result => 
-            <ResultsRenderer 
-                key={result.id}
-                handle={result.handle}
-                alias={result.alias}
-                bio={result.bio}
-                website={result.bio}
-                stat={result.stat}
-            />
-        )
-    } else if (content.length > 0) {
-       results = content.map(result =>
-       <ResultsRenderer
-        key={result.id}
-        type={result.type} 
-        datePublished={result.datePublished}
-        dateUpdate={result.dateUpdated}
-        thumbnail={result.thumbnail}
-        author={result.author}
-        title={result.title}
-        link={result.link}
-        bodyText={result.bodyText}
-        />) 
-    }
+
+    results = searchResult.map((result, id) => <ResultsRenderer key={id} result={result} />)
 
     return(
-        <div className='results'>
+        <div className='container results'>
             <header>
                 <div className="header-anchor">
                     <SearchBar />
                 </div>
             </header>
-            <ul className="container">
+            <main className="container">
                 {results}
-            </ul>
+            </main>
         </div>
     )
 };

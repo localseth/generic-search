@@ -38,7 +38,7 @@ const SearchBar = () => {
             <div className="item searchbar">
                 <h2 className={location.pathname === '/' ? 'hidden' : ''}><Link to='/' className='no-style'>Open Network Search</Link></h2>
                 <input onChange={handleChange} type="text" id="search-box" name="search" placeholder="Enter search terms here..."></input>
-                <button type="submit" id="search-btn" for="search-box" className="search-btn">Search</button>
+                <button type="submit" id="search-btn" htmlFor="search-box" className="search-btn">Search</button>
             </div>
                 <button type="button" id="options-btn" className="options-btn" name="options-btn" onClick={showHideOptions}>Show search options</button>
             <div className="item options hidden" id="options-box">
@@ -46,17 +46,17 @@ const SearchBar = () => {
                     <div className="item date-range border">
                         <h3 className="item">Date Range</h3>
                         <div className="item">
-                            <label for="date-from">From:</label>
+                            <label htmlFor="date-from">From:</label>
                             <input type="date" id="date-from" name="date-from" />
                         </div>
                         <div className="item">
-                            <label for="date-to">To:</label>
+                            <label htmlFor="date-to">To:</label>
                             <input type="date" id="date-to" name="date-to" />
                         </div>
                     </div>
                     <div className="item column border">
                         <div className="item sort">
-                            <label for="sort">Sort by:
+                            <label htmlFor="sort">Sort by:
                                 <select id="sort" name="user-sort">
                                     <option value="" hidden>choose an option</option>
                                     <option value="recent">Recent</option>
@@ -67,7 +67,7 @@ const SearchBar = () => {
                             </label>
                         </div>
                         <div className="item">
-                            <label for="regex" className="form-control">
+                            <label htmlFor="regex" className="form-control">
                                 <input type="checkbox" id="regex" name="user-regex" />
                                 Premium content only
                             </label>

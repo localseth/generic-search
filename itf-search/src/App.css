@@ -34,7 +34,7 @@ body {
 
 header {
   height: 15vh;
-  margin-bottom: 2rem;
+  margin-bottom: none;
 }
 
 form {
@@ -62,7 +62,15 @@ a.no-style {
 
 article:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 255 0.03);
+  /* background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.08),
+    15%,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  );
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.04);
+  transition-duration: 450ms; */
 }
 
 label,
@@ -353,6 +361,12 @@ span.creator {
   justify-content: center;
 }
 
+.results article {
+  border-radius: 1rem;
+  margin: 0.25rem;
+  padding: 0.75rem;
+}
+
 /* Tooltip styles */
 .tooltip-container {
   display: flex;
@@ -446,6 +460,7 @@ span.creator {
   display: flex;
   flex-flow: row;
   justify-content: left;
+  width: 100%;
 }
 
 .result-container img {
@@ -630,7 +645,7 @@ focus {
 }
 
 article:nth-of-type(2) .large-profile-pic {
-  background-color: rgb(115, 5, 115);
+  background-image: rgb(115, 5, 115);
 }
 
 article:nth-of-type(3) .large-profile-pic {
@@ -639,6 +654,10 @@ article:nth-of-type(3) .large-profile-pic {
 
 article:nth-of-type(4) .large-profile-pic {
   background-color: rgb(149, 101, 30);
+}
+
+article .large-profile-pic {
+  background-image: linear-gradient(#d7d7d33b, #2a2a2a27);
 }
 
 .link-section ul {
