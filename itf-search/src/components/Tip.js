@@ -34,7 +34,7 @@ const Tip = (props) => {
 
     return(
         <div className="tip">
-            <span>Tip</span>
+            <span className="badge">Tip</span>
             <p>
             To search for creators, use "@" before your search term. For tags, use "#"
             </p>

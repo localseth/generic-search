@@ -1,5 +1,5 @@
 import React, { useState, useEffect }from 'react';
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { useNavigate, useLocation, useParams, Link } from 'react-router-dom';
 import '../App.css';
 
 import Tip from './Tip';
@@ -11,6 +11,9 @@ const SearchBar = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
+    const params = useParams();
+
+    useEffect(() => console.log(params));
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,10 +24,10 @@ const SearchBar = () => {
     const showHideOptions = () => {
         const element = document.getElementById('options-box');
         console.log(element.classList)
-        if (element.classList.value.includes('hidden')) {
-            element.classList.remove('hidden')
+        if (element.classList.value.includes('show')) {
+            element.classList.remove('show');
         } else {
-            element.classList.add('hidden')
+            element.classList.add('show')
         }
     }
     // update search query state
@@ -41,7 +44,7 @@ const SearchBar = () => {
                 <button type="submit" id="search-btn" htmlFor="search-box" className="search-btn">Search</button>
             </div>
                 <button type="button" id="options-btn" className="options-btn" name="options-btn" onClick={showHideOptions}>Show search options</button>
-            <div className="item options hidden" id="options-box">
+            <div className="item options hidden-options" id="options-box">
                 <div className="column">
                     <div className="item date-range border">
                         <h3 className="item">Date Range</h3>

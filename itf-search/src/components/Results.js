@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
 import '../App.css';
 
@@ -11,19 +11,32 @@ const { users, content } = sampleData;
 const searchResult = users.concat(content);
 console.log(searchResult);
 
-// shuffle function to make sample data appera more natural
-function shuffleArray(arr) {
-    arr.sort(() => Math.random() - 0.5);
-}
 
-shuffleArray(searchResult);
+
 
 const Results = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const location = useLocation();
-    let results;
+    
+    // shuffle function to make sample data appera more natural
+    const shuffleArray = (arr) => {
+        const newArray = arr.sort(() => Math.random() - 0.5);
+        return newArray;
+    }
 
-    results = searchResult.map((result, id) => <ResultsRenderer key={id} result={result} />)
+    const searchResults = shuffleArray(searchResult);
+
+    // useEffect( () => {
+    //     const newArray = searchResult.sort(() => Math.random() - 0.5);
+    //     searchResults = newArray;
+    //     console.log(searchResults);
+    // });
+
+    // let results;
+
+    const results = searchResults.map((result, id) => {
+        return <ResultsRenderer key={id} result={result} />;
+    });
 
     return(
         <div className='container results'>
