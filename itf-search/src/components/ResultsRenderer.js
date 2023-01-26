@@ -3,7 +3,7 @@ import '../App.css';
 
 const ResultsRenderer = (props) => {
     const { result } = props;
-    console.log('results renderer loaded', result.type);
+    // console.log('results renderer loaded', result.type);
     
     if (result.type) {
         return(

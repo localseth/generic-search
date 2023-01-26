@@ -239,7 +239,6 @@ button:focus {
 
 .badge {
   height: 1.75rem;
-  padding-top: 0.5rem !important;
   text-decoration: none;
 }
 

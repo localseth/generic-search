@@ -1,5 +1,5 @@
 import React, { useState, useEffect }from 'react';
-import { useNavigate, useLocation, useParams, Link } from 'react-router-dom';
+import { useNavigate, useLocation, useParams, useSearchParams, Link } from 'react-router-dom';
 import '../App.css';
 
 import Tip from './Tip';
@@ -7,17 +7,18 @@ import Tip from './Tip';
 const SearchBar = () => {
     // set state
     const [submitting, setSubmitting] = useState(false);
+    const [searchParams, setSearchParams] = useSearchParams();
     const [searchQuery, setSearchQuery] = useState('');
 
     const location = useLocation();
     const navigate = useNavigate();
     const params = useParams();
 
-    useEffect(() => console.log(params));
+    useEffect(() => console.log(searchParams.get('searchText')));
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate(`/search?query=${searchQuery}`)
+        navigate(`/search?${searchParams.toString()}`)
 
     };
 
@@ -32,15 +33,25 @@ const SearchBar = () => {
     }
     // update search query state
     const handleChange = (e) => {
-        // console.log(e.target);
-        setSearchQuery(e.target.value);
+        const key = e.target.dataset.key || null;
+        const value = e.target.value;
+        console.log(key, value);
+        if (key) {
+            searchParams.set(key, value);
+            searchParams.forEach(item => console.log(item));
+        }
     }
+
+    // update searchParams
+    // const updateSearchParams = () => {
+    //     searchParams.forEach();
+    // }
 
     return(
         <form className="container" autoComplete="off" onSubmit={handleSubmit}>
             <div className="item searchbar">
                 <h2 className={location.pathname === '/' ? 'hidden' : ''}><Link to='/' className='no-style'>Open Network Search</Link></h2>
-                <input onChange={handleChange} type="text" id="search-box" name="search" placeholder="Enter search terms here..."></input>
+                <input onChange={handleChange} data-key="searchText" type="text" id="search-box" name="search" placeholder="Enter search terms here..."></input>
                 <button type="submit" id="search-btn" htmlFor="search-box" className="search-btn">Search</button>
             </div>
                 <button type="button" id="options-btn" className="options-btn" name="options-btn" onClick={showHideOptions}>Show search options</button>
@@ -60,7 +71,7 @@ const SearchBar = () => {
                     <div className="item column border">
                         <div className="item sort">
                             <label htmlFor="sort">Sort by:
-                                <select id="sort" name="user-sort">
+                                <select onChange={handleChange} data-key="sort" id="sort" name="user-sort">
                                     <option value="" hidden>choose an option</option>
                                     <option value="recent">Recent</option>
                                     <option value="popular">Old</option>
@@ -71,7 +82,7 @@ const SearchBar = () => {
                         </div>
                         <div className="item">
                             <label htmlFor="regex" className="form-control">
-                                <input type="checkbox" id="regex" name="user-regex" />
+                                <input onChange={handleChange} data-key="premium" type="checkbox" id="regex" name="user-regex" />
                                 Premium content only
                             </label>
                         </div>
