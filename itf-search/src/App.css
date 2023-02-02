@@ -354,6 +354,11 @@ ul.container {
   white-space: nowrap;
 }
 
+.results .options h3 {
+  width: 100% !important;
+  text-align: center !important;
+}
+
 .results h3 {
   font-weight: 400;
   margin: 0.125rem;

@@ -33,6 +33,7 @@ const Options = (props) => {
                         </div>
                     </div>
                     <div className="item column border">
+                        <h3>Filter & Sort</h3>
                         <div className="item sort">
                             <label htmlFor="sort">Sort by:
                                 <select defaultValue={searchParams.get('sort')} onChange={handleChange} data-key="sort" id="sort" name="user-sort">
