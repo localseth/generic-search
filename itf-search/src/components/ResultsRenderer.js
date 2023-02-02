@@ -37,7 +37,7 @@ const ResultsRenderer = (props) => {
                     <h3>{result.alias}</h3>
                     <a href="#">{result.website}</a>
                     <p>{result.bio}</p>
-                    <p>ESG Score: {result.stat}</p>
+                    <p className="stats">ESG Score: <span>{result.stat}</span></p>
                     <div className="link-section">
                         <ul>
                             <li><a href="#">articles</a></li>

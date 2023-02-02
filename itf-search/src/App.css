@@ -24,16 +24,23 @@ body {
   min-height: 90vh;
 }
 
+.tip.hidden,
 .hidden {
-  display: none !important;
+  display: none;
 }
 
 .hidden-options {
-  height: 0;
+  height: 0px;
   display: none;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 250ms ease-in, visibility 0ms ease-in 250ms;
+  animation: fadein;
+  transition: opacity 250ms ease-in, visibility 250ms ease-in;
+}
+
+.results .hidden-options {
+  padding: 0px !important;
+  margin: 0px !important;
 }
 
 .hidden-options.show {
@@ -344,6 +351,7 @@ ul.container {
   min-width: 10rem;
   text-align: right;
   height: auto;
+  white-space: nowrap;
 }
 
 .results h3 {
@@ -472,6 +480,22 @@ span.creator {
   max-width: 700px;
 }
 
+.results p.stats {
+  /* border-left: 2px solid #92929d; */
+  padding: 0px 0.25rem 0rem;
+  margin: 0.25rem 0.25rem 0.25rem 0rem;
+}
+
+.stats span {
+  font-weight: bold;
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+  background-color: #92929d;
+  color: #1c1c24;
+  padding: 0.1rem 0.25rem;
+  border-radius: 2px;
+}
+
 .results nav {
   text-align: center;
 }
@@ -480,8 +504,21 @@ span.creator {
   margin: 1rem 1rem;
 }
 
-.current-page-nav {
+nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.active {
   text-decoration: underline;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
 }
 
 .results {
@@ -698,7 +735,7 @@ article .large-profile-pic {
 
 .link-section ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0.25rem 0rem;
   padding: 0;
   display: flex;
   flex-flow: row nowrap;

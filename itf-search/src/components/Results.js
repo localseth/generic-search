@@ -5,6 +5,7 @@ import '../App.css';
 // import components
 import SearchBar from './SearchBar';
 import ResultsRenderer from './ResultsRenderer';
+import Navbar from './Navbar';
 
 const sampleData = require('../sample-data.json');
 const { users, content } = sampleData;
@@ -26,14 +27,6 @@ const Results = () => {
 
     const searchResults = shuffleArray(searchResult);
 
-    // useEffect( () => {
-    //     const newArray = searchResult.sort(() => Math.random() - 0.5);
-    //     searchResults = newArray;
-    //     console.log(searchResults);
-    // });
-
-    // let results;
-
     const results = searchResults.map((result, id) => {
         return <ResultsRenderer key={id} result={result} />;
     });
@@ -44,6 +37,7 @@ const Results = () => {
                 <div className="header-anchor">
                     <SearchBar />
                 </div>
+                <Navbar searchParams={searchParams} />
             </header>
             <main className="container">
                 {results}
