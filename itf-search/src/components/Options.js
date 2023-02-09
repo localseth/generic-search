@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Tip from './Tip';
 
 const Options = (props) => {
-    const { searchParams, location, handleChange, optionsHidden } = props;
+    const { searchParams, location, handleChange, optionsHidden, handleDate } = props;
 
     const showHideOptions = () => {
         const element = document.getElementById('options-box');
@@ -25,11 +25,11 @@ const Options = (props) => {
                         <h3 className="item">Date Range</h3>
                         <div className="item">
                             <label htmlFor="date-from">From:</label>
-                            <input type="date" id="date-from" name="date-from" />
+                            <input onChange={handleDate} type="date" data-key="date-from" id="date-from" name="date-from" />
                         </div>
                         <div className="item">
                             <label htmlFor="date-to">To:</label>
-                            <input type="date" id="date-to" name="date-to" />
+                            <input onChange={handleDate} type="date" data-key="date-to" id="date-to" name="date-to" />
                         </div>
                     </div>
                     <div className="item column border">

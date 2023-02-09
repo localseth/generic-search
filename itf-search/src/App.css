@@ -131,6 +131,24 @@ button.options-btn {
   background: transparent;
   border: 1px solid transparent;
   margin: 1rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.options-btn::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  background-color: #92929d;
+  transition: all ease-in-out 0.2s;
+}
+.options-btn:hover::after,
+.options-btn:focus::after {
+  width: 100%;
+  left: 0;
 }
 
 button:hover {
@@ -766,43 +784,3 @@ article .large-profile-pic {
   color: #fafafb;
   text-transform: uppercase;
 }
-
-/* OLD DEFAULT CSS */
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

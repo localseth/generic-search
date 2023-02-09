@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState, useEffect, useRef }from 'react';
 import { useNavigate, useLocation, useParams, useSearchParams, Link } from 'react-router-dom';
 import '../App.css';
 
@@ -14,7 +14,11 @@ const SearchBar = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const params = useParams();
+    const textInput = useRef(null);
 
+    useEffect( () => {
+        textInput.current.focus();
+    }, [])
     useEffect(() => console.log(searchParams.get('searchText')));
     // useEffect(() => {
     //     if (searchParams.get('searchText')) {
@@ -27,8 +31,6 @@ const SearchBar = () => {
         navigate(`/search?${searchParams.toString()}`)
 
     };
-
-    
 
     const toggleHidden = () => {
         optionsHidden ? setOptionsHidden(false) : setOptionsHidden(true);
@@ -47,19 +49,37 @@ const SearchBar = () => {
         }
     }
 
+    // log value (for development only)
+    const logValue = (e) => {
+        console.log(e.target.dataset.key, e.target.value);
+        const date1 = new Date(e.target.value)
+        console.log(date1.toISOString());
+    }
+
+    // package date into range and set parameters
+    const handleDate = (e) => {
+        const key = e.target.dataset.key || null;
+        const value = new Date(e.target.value);
+        if (key) {
+            searchParams.set(key, value.toISOString());
+            console.log(searchParams.get(key));
+        }
+    }
+
     // consider using React Mentions to style text inside the input element https://github.com/signavio/react-mentions
 
     return(
         <form className="container" autoComplete="off" onSubmit={handleSubmit}>
             <div className="item searchbar">
                 <h2 className={location.pathname === '/' ? 'hidden' : ''}><Link to='/' className='no-style'>Open Network Search</Link></h2>
-                <input defaultValue={searchParams.get('searchText') || ''} onChange={handleChange} data-key="searchText" type="text" id="search-box" name="search" placeholder="Enter search terms here..."></input>
+                <input defaultValue={searchParams.get('searchText') || ''} onChange={handleChange} ref={textInput} data-key="searchText" type="text" id="search-box" name="search" placeholder="Enter search terms here..."></input>
                 <button type="submit" id="search-btn" htmlFor="search-box" className="search-btn">Search</button>
             </div>
                 <button type="button" id="options-btn" className="options-btn" name="options-btn" onClick={toggleHidden}>{optionsHidden ? 'Show' : 'Hide'} search options</button>
             <Options 
                 location={location}
                 handleChange={handleChange}
+                handleDate={handleDate}
                 optionsHidden={optionsHidden}
                 searchParams={searchParams}
             />    
