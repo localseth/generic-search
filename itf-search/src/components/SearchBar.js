@@ -3,6 +3,7 @@ import { useNavigate, useLocation, useParams, useSearchParams, Link } from 'reac
 import '../App.css';
 
 import Options from './Options';
+import InputField from './InputField';
 
 const SearchBar = () => {
     // set state
@@ -44,7 +45,7 @@ const SearchBar = () => {
         // console.log(key, value);
         if (key) {
             searchParams.set(key, value);
-            console.log(searchParams.get('searchText'));
+            // console.log(searchParams.get('searchText'));
             // searchParams.forEach(item => console.log(item));
         }
     }
@@ -66,13 +67,20 @@ const SearchBar = () => {
         }
     }
 
+    const selectedTags = tags => console.log(tags);
+
     // consider using React Mentions to style text inside the input element https://github.com/signavio/react-mentions
 
     return(
         <form className="container" autoComplete="off" onSubmit={handleSubmit}>
             <div className="item searchbar">
                 <h2 className={location.pathname === '/' ? 'hidden' : ''}><Link to='/' className='no-style'>Open Network Search</Link></h2>
-                <input defaultValue={searchParams.get('searchText') || ''} onChange={handleChange} ref={textInput} data-key="searchText" type="text" id="search-box" name="search" placeholder="Enter search terms here..."></input>
+                <InputField
+                    searchParams={searchParams}
+                    handleChange={handleChange}
+                    textInput={textInput}
+                    selectedTags={selectedTags}
+                />
                 <button type="submit" id="search-btn" htmlFor="search-box" className="search-btn">Search</button>
             </div>
                 <button type="button" id="options-btn" className="options-btn" name="options-btn" onClick={toggleHidden}>{optionsHidden ? 'Show' : 'Hide'} search options</button>
