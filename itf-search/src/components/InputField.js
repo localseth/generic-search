@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const InputField = ({handleChange, textInput, searchParams, selectedTags}) => {
     const [tags, setTags] = useState([]);
+
+    useEffect(() => {
+        initiateTags();
+    },[])
 
     const hashTagRegex = /#\w+/i;
 
     const addTags = event => {
         console.log(event.target.value);
         if (event.key === " " && event.target.value !== "" && event.target.value.match(hashTagRegex) ) {
-            console.log('space button pressed')
-            setTags([...tags, event.target.value]);
-            selectedTags([...tags, event.target.value]);
+            console.log('space button pressed');
+            const tagSimplified = event.target.value.replace('#','').trim();
+            setTags([...tags, tagSimplified]);
+            selectedTags([...tags, tagSimplified]);
             event.target.value = "";
         }
     };
@@ -18,6 +23,14 @@ const InputField = ({handleChange, textInput, searchParams, selectedTags}) => {
     const removeTags = index => {
         setTags([...tags.filter(tag => tags.indexOf(tag) !== index)]);
     };
+
+    const initiateTags = () => {
+        if (searchParams.get('tags')) {
+            const tags = searchParams.get('tags').split(',');
+            console.log(tags);
+            setTags(tags);
+        }
+    }
 
     return(
         <div className="tags-input">
@@ -36,6 +49,7 @@ const InputField = ({handleChange, textInput, searchParams, selectedTags}) => {
                 defaultValue={searchParams.get('searchText') || ''}
                 onChange={handleChange}
                 onKeyUp={event => addTags(event)}
+                // onBeforeInput={initiateTags}
                 ref={textInput}
                 data-key="searchText"
                 type="text"

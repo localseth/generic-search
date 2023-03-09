@@ -67,7 +67,10 @@ const SearchBar = () => {
         }
     }
 
-    const selectedTags = tags => console.log(tags);
+    const selectedTags = (tags) => {
+        console.log(tags);
+        searchParams.set('tags', tags.toString());
+    }
 
     // consider using React Mentions to style text inside the input element https://github.com/signavio/react-mentions
 

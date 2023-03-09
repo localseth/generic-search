@@ -110,29 +110,6 @@ label,
   color: #92929d;
 }
 
-<<<<<<< HEAD
-input[type="text"] {
-  background-color: #292932;
-  color: #92929d;
-  width: 100%;
-  /* max-width: 70%; */
-  height: 100%;
-  border: 1px solid #94ffb200;
-  border-radius: 15px 2px 2px 15px;
-  padding-left: 1rem;
-  transition: all 250ms ease-in-out;
-}
-
-input[type="text"]:focus,
-input[type="submit"]:focus {
-  outline: none;
-  border-color: #94ffb2;
-  box-shadow: 0px 0px 10px -2px #94ffb243;
-  /* padding-left: 0.875rem; */
-}
-
-=======
->>>>>>> 64edcde772d6caf57c5c5daa2899c3b2ce2b61cc
 .options select {
   margin-left: 0.5rem;
 }
@@ -253,7 +230,7 @@ button:focus {
   align-items: flex-start;
   margin: 1.5rem 0.5rem 0.5rem;
   padding: 1rem;
-  border: 2px solid var(--main-accent-color);
+  border: 1.5px solid var(--main-accent-color);
   box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
   width: 100%;
 }
@@ -369,12 +346,12 @@ li.hashtag {
   border: none;
   border-radius: 15px 2px 2px 15px;
   padding-left: 1rem;
+  border: 1.5px solid transparent;
 }
 
 .tags-input:focus-within {
   outline: none;
-  border: 2px solid var(--main-accent-color);
-  padding-left: 0.875rem;
+  border: 1.5px solid var(--main-accent-color);
 }
 
 input[type="text"] {
@@ -399,6 +376,8 @@ input[type="text"]:focus {
 }
 
 .tags-input li {
+  text-transform: lowercase;
+  font-size: 0.75rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
