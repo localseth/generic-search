@@ -1,22 +1,35 @@
 import React, { useState, useEffect } from 'react';
 
-const InputField = ({handleChange, textInput, searchParams, selectedTags}) => {
+const InputField = ({handleChange, textInput, searchParams, selectedTags, selectedAuthors}) => {
     const [tags, setTags] = useState([]);
+    const authors = searchParams.get('author');
 
     useEffect(() => {
         initiateTags();
     },[])
 
     const hashTagRegex = /#\w+/i;
+    const authorRegex = /@\w+/i;
 
     const addTags = event => {
-        console.log(event.target.value);
+        // console.log(event.target.value, event.key);
         if (event.key === " " && event.target.value !== "" && event.target.value.match(hashTagRegex) ) {
             console.log('space button pressed');
             const tagSimplified = event.target.value.replace('#','').trim();
-            setTags([...tags, tagSimplified]);
-            selectedTags([...tags, tagSimplified]);
-            event.target.value = "";
+            if (!tags.includes(tagSimplified)) {
+                setTags([...tags, tagSimplified]);
+                selectedTags([...tags, tagSimplified]);
+                event.target.value = "";
+            }
+        }
+        // if (event.key === " " & event.target.value !== "" && event.target.value.match(authorRegex) ) {
+        //     const tagSimplified = event.target.value.replace('@','').trim();
+        //     selectedAuthors([...authors, tagSimplified]);
+        //     console.log(authors);
+        // }
+        if (event.key === "Backspace" && event.target.value === "" && selectedTags) {
+            console.log('backspace pressed');
+            removeTags(tags.length - 1);
         }
     };
 
