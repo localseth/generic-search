@@ -10,6 +10,8 @@ const SearchBar = () => {
     const [submitting, setSubmitting] = useState(false);
     const [optionsHidden, setOptionsHidden] = useState(true);
     const [searchParams, setSearchParams] = useSearchParams();
+    // const [tags, setTags] = useState([]);
+    // const [authors, setAuthors] = useState([]);
     // const [searchQuery, setSearchQuery] = useState('');
 
     const location = useLocation();
@@ -87,6 +89,11 @@ const SearchBar = () => {
                     handleChange={handleChange}
                     textInput={textInput}
                     selectedTags={selectedTags}
+                    selectedAuthors={selectedAuthors}
+                    // tags={tags}
+                    // setTags={setTags}
+                    // authors={authors}
+                    // setAuthors={setAuthors}
                 />
                 <button type="submit" id="search-btn" htmlFor="search-box" className="search-btn">Search</button>
             </div>

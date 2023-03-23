@@ -319,7 +319,9 @@ li.hashtag {
   border: 1px solid var(--secondary-accent-color);
 }
 
-.example .creator {
+.example .creator,
+.creator,
+.hashtag.creator {
   color: #292932;
   background-color: var(--secondary-accent-color);
 }
@@ -382,24 +384,48 @@ input[type="text"]:focus {
   flex-flow: row nowrap;
   align-items: center;
   margin-right: 0.25rem;
+  padding-right: 0.25rem;
+  padding-left: 0.75rem;
   background-color: inherit;
   border: 1px solid var(--secondary-accent-color);
   color: var(--secondary-accent-color);
 }
 
 .tag-close-icon {
-  display: block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  text-align: center;
-  font-size: 14px;
-  margin-left: 8px;
-  background-color: var(--secondary-accent-color);
-  color: #292932;
+  margin-left: 0.5rem;
+  font-size: 1.125rem;
   cursor: pointer;
-  border-radius: 50%;
+  transition: all 200ms;
 }
+
+.tag-close-icon:hover {
+  transform: rotate(90deg);
+}
+
+/* .tag-close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+  background-color: var(--secondary-accent-color);
+}
+.tag-close-icon:before,
+.tag-close-icon:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 20px;
+  background-color: var(--secondary-accent-color);
+  transform: rotate(45deg) translate(-50%, -50%);
+  transform-origin: top left;
+  content: "";
+}
+.tag-close-icon:after {
+  transform: rotate(-45deg) translate(-50%, -50%); */
 
 /* input[type="text"] {
   background-color: #292932;
