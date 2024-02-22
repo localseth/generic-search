@@ -5,7 +5,7 @@ const ResultsRenderer = (props) => {
     const { result } = props;
     // console.log('results renderer loaded', result.type);
     
-    if (result.type) {
+    if (result.type !== "user") {
         return(
             <article className={`result-container ${result.type}`}>
                 <img src={result.thumbnail} alt="image of creator or content preview"></img>

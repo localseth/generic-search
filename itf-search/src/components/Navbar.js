@@ -11,6 +11,7 @@ const Navbar = (props) => {
                 <li><NavLink to={`/search/people?${searchParams.toString()}`}>People</NavLink></li>
                 <li><NavLink to={`/search/articles?${searchParams.toString()}`}>Articles</NavLink></li>
                 <li><NavLink to={`/search/videos?${searchParams.toString()}`}>Videos</NavLink></li>
+                <li><NavLink to={`/search/audio?${searchParams.toString()}`}>Audio</NavLink></li>
             </ul>
         </nav>
     )

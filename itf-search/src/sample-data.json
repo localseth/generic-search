@@ -1,50 +1,6 @@
 {
     "users":[
-        {
-            "id": "16122",
-            "handle": "jhammerstix",
-            "alias": "Johnny Hammerstix",
-            "thumbnail": "/default-user.png",
-            "bio": "Walkin' on walkways, drinkin' from cups. Get real!",
-            "website": "https://jhammerstix.onion",
-            "stat": 4.2
-        },
-        {
-            "id": "16123",
-            "handle": "StPatron",
-            "alias": "Patron Saint",
-            "thumbnail": "/default-user.png",
-            "bio": "'This ain't a joke!",
-            "website": "https://patron.saint",
-            "stat": 210
-        },
-        {
-            "id": "16124",
-            "handle": "Jsmith",
-            "alias": "John Smith",
-            "thumbnail": "/default-user.png",
-            "bio": "Average, run-of-the-mill, standard issue, base model citizen.",
-            "website": "https://johnsmith.onion",
-            "stat": 30.2
-        },
-        {
-            "id": "16125",
-            "handle": "16125",
-            "alias": "anonymous",
-            "thumbnail": "/default-user.png",
-            "bio": "Leave no trace",
-            "website": "https://ridiculouslylongsstringofnumbersandlettersgoeshere.onion",
-            "stat": 0
-        },
-        {
-            "id": "16126",
-            "handle": "jinnforce",
-            "alias": "Qui-Gon Jinn",
-            "thumbnail": "/default-user.png",
-            "bio": "Immortal Jedi looking for work in the afterlife. M.A. in The Force and M.S. in Midiclorian Technologies. Excells at separating children from their parents. Strong ability to make empty promises of a bright future.",
-            "website": "https://jointheforcenow.starwars",
-            "stat": 66
-        }
+       
     ],
     "content": [
         {
@@ -79,6 +35,16 @@
             "title": "Video content",
             "link": "https://linktothecontent.web",
             "bodyText": "This video is about stuff and it's interesting so you'll probably want to watch it, okay?"
+        },
+        {
+            "type": "user",
+            "id": "16126",
+            "handle": "jinnforce",
+            "alias": "Qui-Gon Jinn",
+            "thumbnail": "/default-user.png",
+            "bio": "Immortal Jedi looking for work in the afterlife. M.A. in The Force and M.S. in Midiclorian Technologies. Excells at separating children from their parents. Strong ability to make empty promises of a bright future.",
+            "website": "https://jointheforcenow.starwars",
+            "stat": 66
         },
         {
             "id": "0000004",
@@ -123,6 +89,56 @@
             "title": "Article no. 4",
             "link": "https://linktothecontent.web",
             "bodyText": "Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula. Mollis pretium lorem primis senectus habitasse lectus scelerisque donec, ultricies tortor suspendisse adipiscing fusce morbi volutpat pellentesque, consectetur mi risus molestie curae malesuada cum. Dignissim lacus convallis massa mauris enim ad mattis magnis senectus montes, mollis taciti phasellus accumsan bibendum semper blandit suspendisse faucibus nibh est, metus lobortis morbi cras magna vivamus per risus fermentum. Dapibus imperdiet praesent magnis ridiculus congue gravida curabitur dictum sagittis, enim et magna sit inceptos sodales parturient pharetra mollis, aenean vel nostra tellus commodo pretium sapien sociosqu."
+        },
+        {
+            "type": "user",
+            "id": "16122",
+            "handle": "jhammerstix",
+            "alias": "Johnny Hammerstix",
+            "thumbnail": "/default-user.png",
+            "bio": "Walkin' on walkways, drinkin' from cups. Get real!",
+            "website": "https://jhammerstix.onion",
+            "stat": 4.2
+        },
+        {
+            "type": "user",
+            "id": "16123",
+            "handle": "StPatron",
+            "alias": "Patron Saint",
+            "thumbnail": "/default-user.png",
+            "bio": "'This ain't a joke!",
+            "website": "https://patron.saint",
+            "stat": 210
+        },
+        {
+            "type": "user",
+            "id": "16124",
+            "handle": "Jsmith",
+            "alias": "John Smith",
+            "thumbnail": "/default-user.png",
+            "bio": "Average, run-of-the-mill, standard issue, base model citizen.",
+            "website": "https://johnsmith.onion",
+            "stat": 30.2
+        },
+        {
+            "type": "user",
+            "id": "16125",
+            "handle": "16125",
+            "alias": "anonymous",
+            "thumbnail": "/default-user.png",
+            "bio": "Leave no trace",
+            "website": "https://ridiculouslylongsstringofnumbersandlettersgoeshere.onion",
+            "stat": 0
+        },
+        {
+            "type": "user",
+            "id": "16126",
+            "handle": "jinnforce",
+            "alias": "Qui-Gon Jinn",
+            "thumbnail": "/default-user.png",
+            "bio": "Immortal Jedi looking for work in the afterlife. M.A. in The Force and M.S. in Midiclorian Technologies. Excells at separating children from their parents. Strong ability to make empty promises of a bright future.",
+            "website": "https://jointheforcenow.starwars",
+            "stat": 66
         }
     ]
 }

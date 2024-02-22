@@ -657,8 +657,14 @@ nav ul {
   max-height: 125px;
   width: auto;
   border-radius: 15px;
-  box-shadow: 0px 0px 10px rgba (0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   margin: 0.5rem 1.5rem 1.5rem 0.5rem;
+  transition-duration: 0.2s;
+}
+.result-container:hover img,
+.result-container:focus-within img {
+  box-shadow: 0px 0px 10px -4px var(--main-accent-color);
+  transition-duration: 0.2s;
 }
 
 .search-result {
@@ -690,10 +696,14 @@ nav ul {
   opacity: 0.75;
   font-size: 0.875rem;
   font-weight: lighter;
+  transition-duration: 0.4s;
 }
 
-.search-result a:hover {
+.result-container:hover .search-result a,
+.result-container:focus-within .search-result a {
   opacity: 1;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
 }
 
 /* Checkbox styling */
@@ -870,10 +880,13 @@ article .large-profile-pic {
   border: 1px solid;
   border-radius: 6px;
   background-color: #292932;
+  transition-duration: 0.2s;
 }
 
-.link-section li:hover {
+.link-section li:hover,
+.link-section li:focus-within {
   border: 1px solid var(--main-accent-color);
+  transition-duration: 0.2s;
 }
 
 .link-section a {

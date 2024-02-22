@@ -14,6 +14,7 @@ function App() {
       <Routes>    
         <Route path="/" element={<Home />} />
         <Route path="/search/*" element={<Results />} />
+        <Route path="/search/:type" element={<Results />} />
       </Routes>
   );
 }
