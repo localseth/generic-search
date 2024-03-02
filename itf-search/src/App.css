@@ -60,6 +60,35 @@ body {
   /* transition: height 250ms ease-in; */
 }
 
+#options-box {
+  height: auto;
+  opacity: 1;
+  max-height: 300px;
+  transition: 0.15s ease-in;
+  max-width: 100%;
+}
+
+#options-box.collapsed {
+  opacity: 0;
+  max-height: 0px;
+  transition: 0.15s ease;
+  margin: 0;
+  padding: 0;
+}
+
+#options-box > .column {
+  /* display: none; */
+  opacity: 0;
+  transition-delay: 0.2s;
+  animation: fadein 0 none 0.3s;
+}
+
+#options-box > .column.show {
+  display: inherit;
+  animation: fadein 0 none 0.3s;
+  opacity: 1;
+}
+
 /* div {
   display: flex;
 } */
@@ -265,8 +294,9 @@ content: '|';
 
 /* ANIMATIONS */
 .options {
-  animation-duration: 0.4s;
+  animation-duration: 0.15s;
   animation-name: slidein, fadein;
+  animation-delay: 0.1s;
 }
 
 @keyframes slidein {
@@ -470,8 +500,9 @@ ul.container {
 }
 
 .results .options h3 {
-  width: 100% !important;
-  text-align: center !important;
+  /* width: 100% !important;
+  text-align: center !important; */
+  margin: 0.25rem auto;
 }
 
 .results h3 {
@@ -774,7 +805,8 @@ input[type="date"] {
   padding: 0.5rem 1.25rem 1.25rem;
 }
 
-div[class="item date-range border"] {
+div[class="item date-range border"],
+div[class="item date-range border"] + div {
   text-align: left;
   display: flex;
   flex-flow: column nowrap;

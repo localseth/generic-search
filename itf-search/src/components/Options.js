@@ -16,13 +16,13 @@ const Options = (props) => {
     }
 
     return(
-        optionsHidden ?
-        <></>
-        :
-        <div className="item options" id="options-box">
-                <div className="column">
+        // optionsHidden ?
+        // <></>
+        // :
+        <div className={"item options " + (optionsHidden ? "collapsed" : '') } id="options-box">
+                <div className={"column " + (optionsHidden ? "" : 'show')}>
                     <div className="item date-range border">
-                        <h3 className="item">Date Range</h3>
+                        <h3>Date Range</h3>
                         <div className="item">
                             <label htmlFor="date-from">From:</label>
                             <input onChange={handleDate} type="date" data-key="date-from" id="date-from" name="date-from" />
