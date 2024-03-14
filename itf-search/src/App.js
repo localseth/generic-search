@@ -8,6 +8,7 @@ import './App.css';
 // app components
 import Home from './components/Home';
 import Results from './components/Results';
+import SingleResult from './components/SingleResult';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/search/*" element={<Results />} />
         <Route path="/search/:type" element={<Results />} />
+        <Route path="/search/single/:id" element={<SingleResult />} />
       </Routes>
   );
 }
