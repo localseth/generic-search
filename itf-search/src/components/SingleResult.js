@@ -18,21 +18,17 @@ const SingleResult = () => {
     const { id } = useParams();
 
     const single = searchResult.find( item => item.id === id);
-
-    const result = () => {
-        return <SingleResultRenderer result={single} />
-    }
+    console.log('single: ', single);
 
     return(
-        <div className='container single-result'>
+        <div className='container results single-result'>
             <header>
                 <div className="header-anchor">
                     <SearchBar />
                 </div>
-                <Navbar searchParams={searchParams} />
             </header>
             <main className="container">
-                {result}
+                <SingleResultRenderer key={id} result={single} />
             </main>
         </div>
     )

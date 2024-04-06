@@ -20,13 +20,13 @@ const Results = () => {
     const location = useLocation();
     const { type } = useParams();
     
-    // shuffle function to make sample data appera more natural
-    
+    // shuffle function to make sample data appera more natural    
     const shuffleArray = (arr) => {
         const newArray = arr.sort(() => Math.random() - 0.5);
         return newArray;
     }
 
+    // filters array based on route
     const filterArray = (arr) => {
         console.log(type);
         // console.log(arr);
@@ -37,6 +37,7 @@ const Results = () => {
         }
     }
 
+    // returns what type of result we want to use
     const typeDecoder = (str) => {
         switch (str) {
             case 'videos':

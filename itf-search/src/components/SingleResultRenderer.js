@@ -8,24 +8,23 @@ const SingleResultRenderer = (props) => {
     if (result.type !== "user") {
         return(
             <main className={`result-container ${result.type}`}>
-                <img src={result.thumbnail} alt="image of creator or content preview"></img>
-                <div className="search-result">
-                    <h3>{result.title}</h3>
-                    <div className='creator-container'>
-                        <a href="#" className='timestamp'>{result.datePublished}</a>
-                        <a className="no-decoration" href="#" title={`see more by author`}></a>
-                        <div className="tooltip-container">
-                            <a className="no-decoration" href="#"><span className="creator">{result.author}</span></a>
-                            <div className="tooltip">
-                                <div className="mini-profile">
-                                    <img className="user-img" src="/default-user.png" alt={result.author}></img>
-                                    <p>User stats: 102%<br></br>Half-life: 0.65 millenia</p>
-                                </div>
-                            </div>
-                        </div>
+                <h1>{result.title}</h1>
+                <div class="featured-img">
+                    <img src={result.thumbnail} alt="image of creator or content preview"></img>
+                    <div className="content-meta">
+                        <h2>Meta Info</h2>
+                        <h3>Stats</h3>
+                        <ul>
+                            <li>Views: 256k</li>
+                            <li>Likes: 512k</li>
+                            <li>Big brain score: 10/1</li>
+                        </ul>
+                            <p className="tight-margin">Some kind of linky thing</p>
+                            <a href="#" className='timestamp'>{result.datePublished}</a>
                     </div>
-                    <p className="preview">{result.bodyText}</p>
-                    <a href="#">{result.link}</a>
+                </div>
+                <div className="search-result">
+                    <p>{result.bodyText}</p>
                 </div>
             </main>
         )}

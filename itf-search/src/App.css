@@ -3,6 +3,7 @@
 :root {
   --main-accent-color: #94ffb2;
   --secondary-accent-color: #9191c9;
+  --primary-text: #92929d;
 }
 
 * {
@@ -677,6 +678,9 @@ nav ul {
 
 .results {
   color: #92929d;
+  .container {
+    align-items: stretch;
+  }
 }
 
 .result-container {
@@ -878,19 +882,19 @@ focus {
   margin-right: 1rem !important;
 }
 
-article.user:nth-of-type(4n + 1) .large-profile-pic {
+a.user:nth-of-type(4n + 1) .large-profile-pic {
   background-color: rgba(0, 76, 255, 0.463);
 }
 
-article.user:nth-of-type(4n + 2) .large-profile-pic {
+a.user:nth-of-type(4n + 2) .large-profile-pic {
   background-color: rgb(115, 5, 115);
 }
 
-article.user:nth-of-type(4n + 3) .large-profile-pic {
+a.user:nth-of-type(4n + 3) .large-profile-pic {
   background-color: rgb(33, 99, 48);
 }
 
-article.user:nth-of-type(4n + 4) .large-profile-pic {
+a.user:nth-of-type(4n + 4) .large-profile-pic {
   background-color: rgb(149, 101, 30);
 }
 
@@ -928,4 +932,63 @@ article .large-profile-pic {
   font-weight: 400;
   color: #fafafb;
   text-transform: uppercase;
+}
+
+/* SINGLE RESULT STYLES */
+.single-result .result-container {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  h1 {
+    height: unset;
+  }
+  h2 {
+    margin: 0 0 0.25rem;
+  }
+  h3 {
+    margin: 0;
+    border-bottom: 1px solid var(--primary-text);
+  }
+  .content-meta {
+    text-align: left;
+    box-shadow: -4px 4px 0px -2px var(--secondary-accent-color);
+    padding: 0 1rem 1rem;
+    margin: 0 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    p {
+      margin-top: 0;
+      margin-bottom: 0.25rem;
+    }
+  }
+  .content-meta ul {
+    list-style: none;
+    padding-left: unset;
+    margin-bottom: 1.5rem;
+    li:nth-of-type(1):before {
+      content: "👀";
+      padding-right: 10px;
+    }
+    li:nth-of-type(2):before {
+      content: "🤘";
+      padding-right: 10px;
+    }
+    li:nth-of-type(3):before {
+      content: "🧠";
+      padding-right: 10px;
+    }
+  }
+}
+
+.single-result .result-container .featured-img {
+  display: flex;
+  flex-flow: row-nowrap;
+  margin-bottom: 1rem;
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: unset;
+    margin: 0;
+  }
 }
