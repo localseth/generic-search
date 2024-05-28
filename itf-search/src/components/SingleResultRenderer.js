@@ -9,7 +9,7 @@ const SingleResultRenderer = (props) => {
         return(
             <main className={`result-container ${result.type}`}>
                 <h1>{result.title}</h1>
-                <div class="featured-img">
+                <div className="featured-img">
                     <img src={result.thumbnail} alt="image of creator or content preview"></img>
                     <div className="content-meta">
                         <h2>Meta Info</h2>

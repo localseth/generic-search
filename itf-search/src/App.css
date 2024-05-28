@@ -126,20 +126,11 @@ a.no-style {
 
 article:hover {
   cursor: pointer;
-  /* background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.08),
-    15%,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0)
-  );
-  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.04);
-  transition-duration: 450ms; */
 }
 
 label,
 .tip span {
-  color: #92929d;
+  color: var(--primary-text);
 }
 
 .options select {
@@ -148,13 +139,14 @@ label,
 
 button.options-btn {
   background-color: none;
-  color: #92929d;
+  color: var(--primary-text);
   outline: none;
   background: transparent;
   border: 1px solid transparent;
   margin: 1rem;
   padding-bottom: 0.5rem;
   position: relative;
+  align-self: center;
 }
 
 .options-btn::after {
@@ -164,7 +156,7 @@ button.options-btn {
   height: 2px;
   left: 50%;
   bottom: 0;
-  background-color: #92929d;
+  background-color: var(--primary-text);
   transition: all ease-in-out 0.2s;
 }
 .options-btn:hover::after,
@@ -220,7 +212,7 @@ button:focus {
 }
 
 .options {
-  color: #92929d;
+  color: var(--primary-text);
   font-weight: 300;
   font-size: 0.875rem;
   flex-flow: row wrap;
@@ -290,10 +282,6 @@ li.hashtag {
   height: 1.75rem;
   text-decoration: none;
 }
-
-/* .options .item::after {
-content: '|';
-} */
 
 /* ANIMATIONS */
 .options {
@@ -375,7 +363,7 @@ li.hashtag {
   justify-content: stretch;
   align-items: center;
   background-color: #292932;
-  color: #92929d;
+  color: var(--primary-text);
   min-width: 45vh;
   width: 100%;
   height: 100%;
@@ -463,7 +451,7 @@ input[type="text"]:focus {
 
 /* input[type="text"] {
   background-color: #292932;
-  color: #92929d;
+  color: var(--primary-text);
   width: 100%;
   height: 100%;
   border: none;
@@ -526,7 +514,7 @@ ul.container {
 
 .creator {
   font-family: monospace;
-  background-color: #92929d;
+  background-color: var(--primary-text);
   color: #1c1c24;
   border-radius: 3px;
   text-decoration: none;
@@ -636,7 +624,7 @@ span.creator {
 }
 
 .results p.stats {
-  /* border-left: 2px solid #92929d; */
+  /* border-left: 2px solid var(--primary-text); */
   padding: 0px 0.25rem 0rem;
   margin: 0.25rem 0.25rem 0.25rem 0rem;
 }
@@ -645,7 +633,7 @@ span.creator {
   font-weight: bold;
   font-size: 0.75rem;
   margin-left: 0.25rem;
-  background-color: #92929d;
+  background-color: var(--primary-text);
   color: #1c1c24;
   padding: 0.1rem 0.25rem;
   border-radius: 2px;
@@ -677,7 +665,7 @@ nav ul {
 }
 
 .results {
-  color: #92929d;
+  color: var(--primary-text);
   .container {
     align-items: stretch;
   }
@@ -688,20 +676,28 @@ nav ul {
   flex-flow: row;
   justify-content: left;
   width: 100%;
+  img {
+    height: auto;
+    width: 150px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    margin: 0.5rem;
+    transition-duration: 0.2s;
+  }
+  div.featured-img {
+    min-width: 175px;
+  }
 }
 
-.result-container img {
-  max-height: 125px;
-  width: auto;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  margin: 0.5rem 1.5rem 1.5rem 0.5rem;
-  transition-duration: 0.2s;
-}
 .result-container:hover img,
 .result-container:focus-within img {
   box-shadow: 0px 0px 10px -4px var(--main-accent-color);
   transition-duration: 0.2s;
+}
+
+.tooltip img {
+  width: 84px;
 }
 
 .search-result {
@@ -711,14 +707,14 @@ nav ul {
   align-content: flex-start;
   align-items: flex-start;
   text-align: left;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.625rem;
 }
 
 .search-result p {
   font-size: 0.875rem;
   margin: 0.125rem;
-  font-weight: lighter;
-  line-height: 1.25rem;
+  font-weight: 400;
 }
 
 .preview {
@@ -732,7 +728,6 @@ nav ul {
 .search-result a {
   opacity: 0.75;
   font-size: 0.875rem;
-  font-weight: lighter;
   transition-duration: 0.4s;
 }
 
@@ -801,12 +796,12 @@ input[type="checkbox"]:checked::before {
 select,
 input[type="date"] {
   background-color: #1c1c24;
-  color: #92929d;
+  color: var(--primary-text);
 }
 
 /* Date range */
 .border {
-  border: 2px solid #92929d;
+  border: 2px solid var(--primary-text);
   border-radius: 15px;
   padding: 0.5rem 1.25rem 1.25rem;
 }
@@ -840,7 +835,7 @@ display: none;
 
 /* Always display the drop down caret */
 /* input[type="date"]::-webkit-calendar-picker-indicator {
-color:#92929D;
+color:var(--primary-text);
 } */
 
 /* A few custom styles for date inputs */
@@ -851,7 +846,7 @@ select {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
-  border: 1px solid #92929d;
+  border: 1px solid var(--primary-text);
   border-radius: 10px;
   background: inherit;
   padding: 0.5rem 1rem;
@@ -949,9 +944,14 @@ article .large-profile-pic {
     margin: 0;
     border-bottom: 1px solid var(--primary-text);
   }
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
   .content-meta {
     text-align: left;
-    box-shadow: -4px 4px 0px -2px var(--secondary-accent-color);
+    border-left: 2px solid var(--secondary-accent-color);
     padding: 0 1rem 1rem;
     margin: 0 2rem;
     display: flex;
@@ -961,6 +961,9 @@ article .large-profile-pic {
       margin-top: 0;
       margin-bottom: 0.25rem;
     }
+  }
+  .search-result {
+    padding-left: 0;
   }
   .content-meta ul {
     list-style: none;
@@ -986,7 +989,7 @@ article .large-profile-pic {
   flex-flow: row-nowrap;
   margin-bottom: 1rem;
   img {
-    max-width: 100%;
+    width: auto;
     height: auto;
     max-height: unset;
     margin: 0;

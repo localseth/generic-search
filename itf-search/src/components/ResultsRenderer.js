@@ -7,7 +7,7 @@ const ResultsRenderer = (props) => {
     
     if (result.type !== "user") {
         return(
-            <a href={"search/single/" + result.id} className="wrapped-link no-style">
+            <a href={"/search/single/" + result.id} className="wrapped-link no-style">
                 <article className={`result-container ${result.type}`}>
                     <div className="featured-img">
                         <img src={result.thumbnail} alt="image of creator or content preview"></img>
