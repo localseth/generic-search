@@ -7,10 +7,10 @@ import SearchBar from './SearchBar';
 import ResultsRenderer from './ResultsRenderer';
 import Navbar from './Navbar';
 
-const sampleData = require('../sample-data.json');
+const sampleData = require('../scnr.json');
 const { users, content } = sampleData;
-const searchResult = users.concat(content);
-// console.log(searchResult);
+// const searchResult = users.concat(content);
+// console.log(sampleData);
 
 
 
@@ -57,10 +57,10 @@ const Results = () => {
         }
     }
 
-    const searchResults = shuffleArray(filterArray(searchResult));
+    const searchResults = shuffleArray(filterArray(sampleData));
 
-    const results = searchResults.map((result, id) => {
-        return <ResultsRenderer key={id} result={result} />;
+    const results = sampleData.map((result, id) => {
+        return <ResultsRenderer id={id} result={result} />;
     });
 
     return(

@@ -2,33 +2,54 @@ import React, { useEffect, useState } from 'react';
 import '../App.css';
 
 const ResultsRenderer = (props) => {
-    const { result } = props;
+    const { id, result } = props;
+    const {
+        FeaturedImage,
+        PublishedOnUtcEpoch,
+        Title,
+        ByLine,
+        Description,
+        CanonicalUrl
+    } = result;
+    
+    // Date parse and format
+    const dateInit = new Date(0);
+    dateInit.setUTCSeconds(PublishedOnUtcEpoch);
+    const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    };
+    // TODO: make a dynamic country component/function
+    const dateCountry = 'en-US';
+    const date = dateInit.toLocaleDateString(dateCountry, options)
+    // console.log(featuredImage);
     // console.log('results renderer loaded', result.type);
     
     if (result.type !== "user") {
         return(
-            <a href={"/search/single/" + result.id} className="wrapped-link no-style">
+            <a href={"/search/single/" + id} className="wrapped-link no-style">
                 <article className={`result-container ${result.type}`}>
                     <div className="featured-img">
-                        <img src={result.thumbnail} alt="image of creator or content preview"></img>
+                        <img src={FeaturedImage.CanonicalUrl} alt="image of creator or content preview"></img>
                     </div>
                     <div className="search-result">
-                        <h3>{result.title}</h3>
+                        <h3>{Title}</h3>
                         <div className='creator-container'>
-                            <a href="#" className='timestamp'>{result.datePublished}</a>
+                            <a href="#" className='timestamp'>{date.toString()}</a>
                             <a className="no-decoration" href="#" title={`see more by author`}></a>
                             <div className="tooltip-container">
-                                <a className="no-decoration" href="#"><span className="creator">{result.author}</span></a>
+                                <a className="no-decoration" href="#"><span className="creator">{ByLine}</span></a>
                                 <div className="tooltip">
                                     <div className="mini-profile">
-                                        <img className="user-img" src="/default-user.png" alt={result.author}></img>
+                                        <img className="user-img" src="/default-user.png" alt={ByLine}></img>
                                         <p>User stats: 102%<br></br>Half-life: 0.65 millenia</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <p className="preview">{result.bodyText}</p>
-                        <a href="#">{result.link}</a>
+                        <p className="preview">{Description}</p>
+                        <a href={CanonicalUrl}>View Source</a>
                     </div>
                 </article>
             </a>
